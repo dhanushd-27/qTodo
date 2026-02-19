@@ -1,0 +1,32 @@
+[project]
+name = "qtodo"
+version = "0.1.0"
+description = "qTodo - A todo application"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Dhanush" }]
+keywords = ["todo", "cli"]
+dependencies = [
+    "click>=8.3.1",
+    "langchain>=1.2.10",
+    "langchain-google-genai>=4.2.0",
+    "python-dotenv>=1.2.1",
+    "rich>=14.3.2",
+    "tabulate>=0.9.0",
+    "tinydb>=4.8.2",
+]
+
+[project.scripts]
+qtodo = "cli.commands:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
