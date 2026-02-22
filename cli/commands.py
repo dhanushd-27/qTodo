@@ -1,20 +1,11 @@
 import click
-
+from cli.handlers.list.list_group import list_command
 
 @click.group()
-def app() -> None:
-    """qTodo CLI."""
+def qtodo():
+    pass
 
+qtodo.add_command(list_command, name="list")
 
-@app.command()
-def hi() -> None:
-    """Say hi."""
-    click.echo("Hi")
-
-
-def main() -> None:
-    app()
-
-
-if __name__ == "__main__":
-    main()
+def main():
+    qtodo()
