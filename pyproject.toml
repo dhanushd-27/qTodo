@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/dhanush/qTodo"
+Homepage = "https://github.com/dhanushd-27/qTodo"
 
 [project.scripts]
 qtodo = "main:main"
