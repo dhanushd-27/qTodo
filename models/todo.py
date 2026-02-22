@@ -8,8 +8,10 @@ class Todo(BaseModel):
   priority: int = Field(default=2, ge=1, le=3)
   duration: int = Field(default=60, gt=0)
   completed: bool = False
+  due_date: datetime | None = Field(default=None)
   created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
   updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+  list_id: int | None = Field(default=None)
 
 
 class TodoList(BaseModel):

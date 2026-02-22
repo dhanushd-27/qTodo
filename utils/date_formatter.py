@@ -13,5 +13,5 @@ def format_date(date_val):
         except ValueError:
             return date_val
     if hasattr(date_val, 'strftime'):
-        return date_val.strftime("%Y-%m-%d %H:%M:%S")
+        return date_val.strftime("%d %m %Y")
     return str(date_val)
